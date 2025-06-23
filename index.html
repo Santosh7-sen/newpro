@@ -1,11 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>heading</h1>
-</body>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Navbar</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <!-- Favicons -->
+        <link href="" rel="icon">
+        <link href="" rel="apple-touch-icon">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Main CSS File -->
+        <link href="assets/css/main.css" rel="stylesheet">
+        <style>
+            h2 {
+                /*font-family: monospace;*/
+                font-family: Kingfink regular;
+                font-size: 2rem;
+                white-space: nowrap;
+                overflow: hidden;
+                /*border-right: 3px solid black;
+                 blinking cursor */
+                width: 0;
+                animation: typing 4s steps(30, end) forwards, blink 0.8s infinite;
+                border: 2px solid green;
+                box-shadow: 0px 0px 10px 10px red;
+                background-color: skyblue;
+                text-align: center;
+
+            }
+
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 100%;
+                }
+            }
+
+            @keyframes blink {
+
+                0%,
+                100% {
+                    border-color: transparent;
+                }
+
+                50% {
+                    border-color: black;
+                }
+            }
+
+
+
+            /* Modal Styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            .modal-content {
+                background-color: #fff;
+                margin: 15% auto;
+                padding: 20px;
+                border-radius: 8px;
+                width: 300px;
+            }
+
+            .close {
+                float: right;
+                font-size: 24px;
+                cursor: pointer;
+                color: #333;
+            }
+
+            .icon-btn {
+                font-size: 40px;
+                color: #0d6efd;
+                cursor: pointer;
+                color: black;
+                font-weight: bold;
+            }
+
+
+
+
+
+            input {
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                border: none;
+                background-color: #0d6efd;
+                color: white;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+
+
+
+            .toggle {
+                margin-top: 10px;
+                text-align: center;
+                color:blue;
+                cursor: pointer;
+            }
+
+            .hidden {
+                display: none;
+                
+            }
+           
+        </style>
+
+
+    </head>
+
+    <body class="portfolio-details-page">
+
+        <body class="portfolio-details-page">
+
+            <header id="header" class="header d-flex align-items-center fixed-top">
+                <div class="container position-relative d-flex align-items-center justify-content-between">
+                    <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
+                        <img src="./assets/img/WhatsApp Image 2025-06-23 at 11.20.36_4d582587.jpg" alt=" logo" style="height: 80px;  margin-right:8px;   border-radius:30%; ">
+                        <h1 class="sitename">FURNITURE HUB</h1>
+                    </a>
+
+
+
+
+
+                    <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                        <h1 class="sitename">Rubix</h1><span>.</span>
+                    </a> -->
+
+                    <!-- Navigation Menu -->
+                    <nav id="navmenu" class="navmenu ms-auto">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a
+                                    href="pric.html">Price</a>
+                            </li>
+                            <li><a href="shop.html">Shop</a></li>
+
+
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="https://safety.google/families/">Security And Privicy</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li></li>
+                            <li></li>
+
+                            <!-- <li class="dropdown">
+                                
+                                <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Dropdown 1</a></li>
+                                    <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                        <ul>
+                                            <li><a href="#">Deep Dropdown 1</a></li>
+                                            <li><a href="#">Deep Dropdown 2</a></li>
+                                            <li><a href="#">Deep Dropdown 3</a></li>
+                                            <li><a href="#">Deep Dropdown 4</a></li>
+                                            <li><a href="#">Deep Dropdown 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Dropdown 2</a></li>
+                                    <li><a href="#">Dropdown 3</a></li>
+                                    <li><a href="#">Dropdown 4</a></li>
+                                </ul>
+                            </li> -->
+                        </ul>
+
+                        <!-- Mobile nav toggle (Hamburger icon) -->
+                        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                    </nav>
+
+                    <!-- Button Group (RIGHT aligned) -->
+                    <!-- <div class="btn-group ms-auto d-flex" role="group" aria-label="Basic mixed styles example"> -->
+                    <!-- <a class="btn btn-danger" href="#"><i class="bi bi-cart"></i></a>
+                        <a class="btn btn-warning" href="#"><i class="bi bi-person"></i> </a>
+                        <a class="btn btn-success" href="#"><i class="bi bi-search"></i></a> -->
+                    <!-- </div> -->
+
+                    <div class="ic">
+
+                        <a class="btn text:black;" href="#about" style="color: black; font-weight:bold;  "
+                            id="openModalIcon"><i class="bi bi-person-circle"></i></a>
+                        <a class="btn text:black;" href="#about" style="color: black; "><i class="bi bi-search"></i></a>
+                        <a class="btn text:black;" href="https://www.pepperfry.com/category/furniture.html"
+                            style="color: black; "><i class="bi bi-cart"></i></a>
+                        <span class="position absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            5+
+                            <span class="visually-hidden">unread messege</span>
+                        </span>
+                         <a class="btn text:black;" href="#"
+                            style="color: black; "><i class="bi bi-bell"></i></a>
+                        <span class="position absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">unread messege</span>
+                        </span>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <a href="#">
+                                <h3>Login / Register</h3>
+                            </a>
+                            <!-- login -->
+                            <div class="container" id="form-container">
+
+
+                                <!-- Full Name input (hidden by default) -->
+                                <input type="text" id="fullname" class="hidden" placeholder="Full Name">
+
+                                <input type="text" id="username" placeholder="Username" required>
+                                <input type="password" id="password" placeholder="Password" required>
+
+                                <button id="lo" onclick="handleSubmit()">Login</button>
+
+                                <a href="log.html">Don't have an account? Register</a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <a class="btn-getstarted" href="https://www.pepperfry.com/category/furniture.html"
+                        style="color: black; background-color:red;"><i class="bi bi-cart"></i></a>
+                        <span class="position absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">unread messege</span>
+                        </span>
+
+                    </div> -->
+
+
+                </div>
+            </header>
+
+            <!-- cards -->
+
+            <main class="main">
+
+                <section>
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/img/WhatsApp Image 2025-06-23 at 11.20.37_733cdc97.jpg" class="d-block w-100" height="600px" width="100%" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 style="color:red">First family selection</h5>
+                                    <p>select the best furniture </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/IMG-20250623-WA0026.jpg" class="d-block w-100" height="600px" width="100%" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 style="color:red">First family selection</h5>
+                                    <p>select the best furniture </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/WhatsApp Image 2025-06-23 at 11.20.37_abe117d3.jpg" class="d-block w-100" height="600px" width="100%" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 style="color:red">First family selection</h5>
+                                    <p>select the best furniture </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- Page Title -->
+                <div class="page-title">
+                    <div class="heading">
+                        <div class="container">
+                            <div class="row d-flex justify-content-center text-center">
+                                <div class="col-lg-8">
+                                    <h2 class="heading-title">ABOUT FURNITURES AND REQUIREMENT</h2><br>
+                                    <p class="mb-0">
+                                        furniture is much more than just wooden or metal objects placed around us. It
+                                        adds comfort to our lives, helps organize our belongings, defines spaces,
+                                        improves the beauty of our surroundings, and reflects our identity. Whether at
+                                        home, in school, at work, or in public spaces, we depend on furniture for ease,
+                                        comfort, and efficiency in our everyday routines. While furniture may have some
+                                        drawbacks like cost and maintenance, its importance in modern life is
+                                        undeniable. Without it, life would be uncomfortable, disorganized, and
+                                        incomplete.
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="breadcrumbs">
+                        <div class="container">
+                            <ol>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current">Portfolio Details</li>
+                            </ol>
+                        </div>
+                    </nav>
+                </div><!-- End Page Title -->
+
+                <div>
+                    <p>
+                    <h2>Importance of Furniture in Daily Life</h2><br><br>
+                    <h3>1. Provides Comfort</h3>
+                    The most immediate purpose of furniture is to provide comfort. Imagine living in a house with no
+                    chairs,
+                    sofas, or beds. Life would be tiring and uncomfortable. Furniture like cushioned sofas, ergonomic
+                    chairs, and cozy beds allow us to relax after a hard day’s work. Modern furniture designs are made
+                    keeping human posture and comfort in mind to avoid discomfort or pain, especially for people who
+                    spend
+                    long hours sitting or working from home.
+
+                    <h3>2. Facilitates Daily Activities</h3>
+                    Furniture makes it easier to perform daily tasks. Desks provide a proper workspace for students and
+                    office workers, while dining tables offer a convenient space to eat meals together as a family. Beds
+                    offer a comfortable surface for resting and sleeping. Cupboards and wardrobes keep clothes and
+                    household
+                    items organized and easily accessible. Without furniture, basic tasks like eating, studying,
+                    working,
+                    and sleeping would become inconvenient and disorganized.
+
+                    <h3>3. Organizes Space</h3>
+                    Furniture helps in keeping spaces neat and organized. Storage furniture such as cupboards,
+                    bookshelves,
+                    and cabinets help manage clutter by offering designated places to store things. This prevents items
+                    from
+                    lying around randomly and improves the overall look and functionality of a room. Organized spaces
+                    make
+                    it easier to find things when needed and help maintain a peaceful and efficient environment.
+
+                    <h3>4. Defines Spaces</h3>
+                    Furniture helps to define spaces in homes and offices. For example, a bed indicates that a room is
+                    meant
+                    for sleeping; a dining table identifies the dining area, while desks and chairs in an office create
+                    a
+                    workspace. Without furniture, rooms would have no clear purpose. The arrangement of furniture can
+                    also
+                    influence how a space is used and can separate areas within open spaces, such as dividing a living
+                    room
+                    from a dining area.
+
+                    <h3>5. Improves Aesthetics</h3>
+                    Beyond functionality, furniture enhances the beauty of spaces. Furniture comes in many styles,
+                    designs,
+                    colors, and materials. Whether it’s modern, traditional, minimalist, or luxurious, the choice of
+                    furniture reflects personal taste and contributes to the aesthetics of a home, office, or any other
+                    place. Well-chosen furniture can make small rooms appear larger or make large spaces feel cozy.
+                    Interior
+                    decorators often use furniture as a key element in designing beautiful living or working spaces.
+
+                    <h3>6. Reflects Personality and Lifestyle</h3>
+                    Furniture can be a reflection of a person’s personality, status, and lifestyle. Some people prefer
+                    minimalistic furniture, while others like grand and decorative pieces. A professional office filled
+                    with
+                    elegant desks and leather chairs may reflect formality and seriousness, while a colorful living room
+                    with bean bags and playful décor might reflect a fun, relaxed lifestyle. In this way, furniture
+                    communicates who we are without using words.
+
+                    <h3>7. Supports Productivity and Health</h3>
+                    Ergonomic furniture is specially designed to support health and productivity, especially for those
+                    who
+                    work long hours sitting at a desk. Chairs that support the spine, desks at the right height, and
+                    beds
+                    with proper mattresses help prevent back pain, neck strain, and other health issues. In schools,
+                    properly designed desks and chairs help children maintain good posture and focus on their studies.
+                    In
+                    workplaces, good furniture can reduce fatigue and increase employee productivity.
+
+                    <h3>8. Furniture in Social Life</h3>
+                    Furniture plays an important role in social life. Gathering spaces such as living rooms, cafes,
+                    restaurants, or parks often have comfortable seating arrangements that encourage people to sit,
+                    talk,
+                    and connect. Dining tables bring families together at mealtimes. Comfortable chairs in cafes or
+                    offices
+                    help people engage in conversations or meetings. Thus, furniture often brings people closer,
+                    promoting
+                    interaction and relationships.</p>
+                </div>
+
+            </main>
+
+            <footer id="footer" class="footer light-background">
+
+                <div class="container footer-top">
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 footer-about">
+                            <a href="index.html" class="logo d-flex align-items-center">
+                                <span class="sitename">MyWebsite</span>
+                            </a>
+                            <div class="footer-contact pt-3">
+                                <p>Gangapada</p>
+                                <p>Khordha Pitapali</p>
+                                <p class="mt-3"><strong>Phone:</strong> <span>+91 00 000 00000</span></p>
+                                <p><strong>Email:</strong> <span>furniture@gmail.com</span></p>
+                            </div>
+                            <div class="social-links d-flex mt-4">
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="nav.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Terms of service</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Hic solutasetp</h4>
+                            <ul>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Nobis illum</h4>
+                            <ul>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container copyright text-center mt-4">
+                    <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights
+                            Reserved</span>
+                    </p>
+                    <div class="credits">
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+
+            </footer>
+
+            <!-- Scroll Top -->
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                    class="bi bi-arrow-up-short"></i></a>
+
+            <!-- Preloader -->
+            <div id="preloader"></div>
+
+            <!-- Vendor JS Files -->
+            <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+            <!-- Main JS File -->
+            <script src="assets/js/main.js"></script>
+
+        </body>
+        <script>
+            const modal = document.getElementById("myModal");
+            const icon = document.getElementById("openModalIcon");
+            const closeBtn = document.getElementsByClassName("close")[0];
+
+            icon.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (e) {
+                if (e.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+
+            let isLogin = true;
+
+            function toggleForm() {
+                isLogin = !isLogin;
+                document.getElementById('form-title').textContent = isLogin ? 'Login' : 'Register';
+                document.querySelector('button').textContent = isLogin ? 'Login' : 'Register';
+                document.querySelector('.toggle').textContent = isLogin ? "Don't have an account? Register" : "Already have an account? Login";
+
+                // Show/Hide Full Name field depending on mode
+                document.getElementById('fullname').classList.toggle('hidden', isLogin);
+            }
+
+            function handleSubmit() {
+                const fullname = document.getElementById('fullname').value.trim();
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
+
+                if (!isLogin && fullname === '') {
+                    alert('Please enter your full name.');
+                    return;
+                }
+
+                if (username === '' || password === '') {
+                    alert('Please fill all fields.');
+                    return;
+                }
+
+                // Proceed to next page (dummy navigation for now)
+                window.location.href = 'nav.html';
+            }
+
+        </script>
+
 </html>
